@@ -1,0 +1,32 @@
+# PROVA – Introdução à Programação (BIA) 
+#**Nome completo:** João Guilherme Pires de Andrade  
+#**Matrícula:** 202504010 
+#**E-mail institucional:** andrade_pires@discente.ufg.br
+
+## Questão 5
+
+### a)  A framework utilizada no nosso grupo foi o Flask.
+O Flask é amplamente utilizado no desenvolvimento de APIs e apliacações web de maneira simples.
+Nosso grupo uptou por utilizá-lo haja vista nosso projeto de criar um app que possa averiguar a segurança de um link ou email. Primeiro, trabalhamos com a aplicação web para depois fazer o app.
+Com o Flask, criamos rotas "@app" que vão redirecionar para templates html específicos, executando funções e fazendo uma ponte entre o backend e o frontend.
+
+### b) No nosso projeto, o Flask foi protagonista na elaboração da nossa aplicação web.
+Importando funções criadas para a análise de links e de emails de outros arquivos, buscando os templates html, o Flask criou pontes entre estes: redirecionando para páginas e executando funções dentro delas - a partir das rotas @app
+Em detalhes, o Flask abre um servidor web, renderiza o html, e conecta funções.
+Nesse exemplo simples, tem-se:
+
+"""
+from flask import Flask, render_template # Biblioteca Flask e o render_template para pegar o html
+app = Flask(__name__) # cria o app Flask (o servidor)
+
+@app.route('/') # Cria uma rota de redirecionamento
+def home(): # Cria uma função simples
+    nome = "Maria"
+    return render_template("index.html", nome=nome) # Utiliza essa função para inserir dados no html
+
+if __name__ == '__main__':
+    app.run(debug=True) # Roda o app, com a renderização do html determinado e com a função conectada
+"""
+### c) Não há uma funcionalidade específica que estejamos tentando aplicar. No momento, pesquisamos como aplicar no nosso site o seguinte:
+O flow de login para escolher uma conta google (credencial OAuth) e analisar o email. No código foi fácil, mas aplicar isso em Flask e html ainda está sendo pesquisado.
+Portanto, não há exatamente uma funcionalidade que não aplicamos: estamos tentando descobrir ela, ou chegar a um resultado satisfatório com o que temos.
